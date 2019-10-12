@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {% if title %}
-    <title> {{title}} </title>
-    {% else %}
-    <title>Welcome to news articles outlet</title>
-    {% endif %}
-</head>
-<body>
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
 
-    <h3> Popular News</h3>
+
+{% block content %}
+
+    <h3> Popular News, Upcoming and Trending News</h3>
     <ul>
-        {% for popular_news in popular%}
-            <li>{{ popular_news.title }}</li>
-        {% endfor %}    
+        {{ macro.displayNewsList (upcoming)}}
+
     </ul>
+
+{% endblock %}    
+  
     
-</body>
-</html>
