@@ -1,23 +1,22 @@
 from flask import render_template
 from app import app
-from .request import get_news
+from .request import get_sources
 
 
-@app.route('/')
+@app.route("/")
 def index():
+    """
+    View root function that returns the index page and its data
+    """
+    popular_news = get_sources("popular")
+    title = "Welcome to the best news outlet"
+    return render_template("index.html",title = title,popular = popular_news) 
 
-    """
-    view root function that returns the index page and its data
-    """
-    popular_news = get_news("popular")
-    upcoming_news = get_news("upcoming")
-    now_trending = get_news("trending")
-    title = "Home - Welcome to The best News website Online"
-    return render_template("index.html",title = title, popular = popular_news,upcoming = upcoming_news,trending = now_trending)
 
-@app.route("/news/<int:news_id>")
-def news(news_id):
-    """
-    View news function that returns the news details page and its data
-    """    
-    return render_template("news.html",id = news_id)
+@app.route("/sources/<int:sources_id>")
+def sources(sources_id):
+    '''
+    View news page function that returns the movie details page and its data
+    '''
+    return render_template("news.html",id = sources_id)
+

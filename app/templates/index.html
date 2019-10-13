@@ -1,15 +1,15 @@
-{% extends 'base.html' %}
+{% extends 'base.html'%}
 {% import 'macros.html' as macro %}
 
-
-{% block content %}
-
-    <h3> Popular News, Upcoming and Trending News</h3>
-    <ul>
-        {{ macro.displayNewsList (upcoming)}}
-
-    </ul>
+{% block content %}    
+           
+        
+        
+            <h3>Popular News Sources</h3>
+            <ul>
+                {{macro.displaySourceList(popular) }}  
+            </ul>
+        
 
 {% endblock %}    
-  
     
