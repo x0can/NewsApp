@@ -2,7 +2,7 @@ from flask import render_template,request,redirect,url_for
 from .import main
 from ..request import get_sources,get_articles
 
-from ..models import Source
+from ..models import Article
 
 
 @main.route("/")
@@ -20,7 +20,8 @@ def sources(sources_id):
     '''
     View news page function that returns the movie details page and its data
     '''
-    news_source = get_articles(category)
-    title = "Worlds best articles"
-    return render_template("news.html",id = sources_id,title = title,news = news_source)
+
+    news_source = get_articles(sources_id,per_page)
+    title = f"{sources_id} | All Articles"
+    return render_template("news.html",name = sources_id,title = title,news = news_source)
 
