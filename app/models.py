@@ -12,7 +12,7 @@ class Source:
         self.category = category
         self.language = language
         self.country = country
-
+   
 class Article:
     '''
     Article class to define article objects
