@@ -107,3 +107,18 @@ def process_article_results(article_list):
 
     return articles_results
 
+def search_news(name):
+    search_news_url = "https://newsapi.org/v2/everything?q={}&apiKey=913ddb20854a426ab84266c7a0de5438".format(name)
+
+    with urllib.request.urlopen(search_news_url) as url:
+
+        search_news_data = url.read()
+        search_news_response = json.loads(search_news_data)
+
+        search_news_results = None
+
+        if search_news_response['articles']:
+            search_news_list = search_news_response['articles']
+            search_news_results = process_article_results(search_news_list)
+
+    return search_news_results        
