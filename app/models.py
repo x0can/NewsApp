@@ -28,4 +28,25 @@ class Article:
         self.urlToImage = urlToImage
         self.publishedAt = publishedAt
         self.content = content
-        
+
+    def save_news(self):
+        Article.all_articles.append(self)
+
+    @classmethod
+    def clear_news(cls):
+        Article.all_articles.clear()
+
+    @classmethod
+    def get_news(cls,name):
+
+        response = []
+
+        for article in cls.all_articles:
+
+            if article.news_name == name:
+
+                response.append(article)
+        return response        
+
+            
+
