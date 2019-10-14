@@ -33,7 +33,7 @@ def sources(sources_id):
 
     news_source = get_articles(sources_id)
     title = f"{sources_id} | All Articles"
-    return render_template("news.html",name = sources_id,title = title,news = news_source)
+    return render_template("news.html",id = sources_id,title = title,news = news_source)
 
 @main.route("/search/<news_feed>")
 def search(news_feed):

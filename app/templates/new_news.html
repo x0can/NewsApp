@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+
+<div class="container">
+    <div class="col-md-12">
+
+        <img src="{{source.urlToImage}}" alt="{{source.content}}" class="img-responsive">
+
+    </div>
+
+    <div class="col-md-6">
+        {{ wtf.quick_form(article_form) }}
+
+    </div>
+
+</div>
+
+{% endblock %}
