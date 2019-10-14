@@ -1,17 +1,27 @@
 {% macro displaySourceList(source_list) %}
 
     {% for source in source_list %}
+
+    
       
 
 
-        <div class="card border-primary mb-3 col-md-3">
-                <div class="card-header">{{source.name}}</div>
-                <div class="card-body">
-                    <p class="card-text">{{source.description|truncate(150)}}
-                        <br>
-                        <a href="/sources/{{source.id}}"><button type="button" class="btn btn-primary btn-sm">Read Articles</button></a></p>
+       
+            <div class="col-md-6">
+                    <div class="card ">
+
+                            <h4 class="card-title bg-danger"><b>{{source.name}}</b></h4><hr>
+                            
+                        <div class="card-img-overlay">
+                            
+
+                            <p class="card-text"><small>{{source.description|truncate(150)}}</small></p>
+                            <p class="card-text"><small><a href="/sources/{{source.id}}"><button type="button" class="btn btn-primary btn-sm">Read Articles</button></a></small></p>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            
+        
     {% endfor %}
 
 {% endmacro %}        
