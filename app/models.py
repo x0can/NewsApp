@@ -46,6 +46,7 @@ class Article:
             if article.news_name == name:
 
                 response.append(article)
+                
         return response        
 
             
