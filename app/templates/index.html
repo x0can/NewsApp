@@ -5,10 +5,71 @@
            
         
         
-            <h3>Popular News Sources</h3>
-            <ul>
-                {{macro.displaySourceList(popular) }}  
-            </ul>
+            <div class="container-fluid card-body"> 
+
+                
+
+                    <h3 style="text-align: center;  color: black; font-size: xx-large;">Popular News Sources</h3>
+
+                    
+
+
+                
+
+
+                    <div style="text-align: center;">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                            CHECKOUT LATEST NEWS
+                          </button>
+                    </div>
+                          
+                          <!-- The Modal -->
+                          <div class="modal" id="myModal">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                          
+                                <!-- Modal Header -->
+                                <div class="modal-header bg-success">
+                                  <h4 class="modal-title glyphicon glyphicon-thumbs-up">NEWS ARTICLES AND SOURCES</h4>
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                          
+                                <!-- Modal body -->
+                                <div class="modal-body">
+
+
+                                <div class="card">
+                                    <div class="card-body">
+                                            <ul>
+                                                    {{macro.displaySourceList(popular) }}  
+                                                </ul>
+                                            
+
+                                    </div>
+
+                                </div>    
+
+
+                                    
+                                              
+                                </div>
+                          
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                          
+                              </div>
+                            </div>
+                          </div>
+
+                          <img src="https://arkenea.com/blog/wp-content/uploads/2018/09/pexels-photo-374631.jpeg" alt="" height="fit-content" style="height: fit-content; background-repeat: no-repeat ;" class="img-responsive">
+
+
+           </div>
+
+           <!-- Button to Open the Modal -->
+
         
 
 {% endblock %}    
