@@ -3,23 +3,28 @@
     {% for source in source_list %}
 
     
-      
+                                             
 
 
        
-            <div class="col-md-6">
-                    <div class="card ">
-
-                            <h4 class="card-title bg-warning"><b>{{source.name}}</b></h4><hr>
-                            
-                        <div class="card-img-overlay">
-                            
-
-                            <p class="card-text"><small>{{source.description|truncate(150)}}</small></p>
-                            <p class="card-text"><small><a href="/sources/{{source.id}}"><button type="button" class="btn btn-primary btn-sm">Read Articles</button></a></small></p>
+           <div class="container-fluid">
+               <div class="row">
+                    <div class="col-md-3">
+                            <div class="card ">
+        
+                                    <h4 class="card-title bg-warning"><b>{{source.name}}</b></h4><hr>
+                                    
+                                <div class="card-img-overlay">
+                                    
+        
+                                    <p class="card-text"><small>{{source.description|truncate(150)}}</small></p>
+                                    <p class="card-text"><small><a href="/sources/{{source.id}}"><button type="button" class="btn btn-primary btn-sm">Read Articles</button></a></small></p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
+
+               </div>
+           </div>
             
         
     {% endfor %}
@@ -29,14 +34,14 @@
 {% macro displayArticleList(article_list) %}
 {% for article in article_list %}
 
-<div class="container">
+<div class="container-fluid">
 
 
 
         <div class="row no-gutters">
             <div class="col-md-8">
                 <div class="card card-inverse">
-                    <p class="jumbotron" style="font-size: xx-large; text-align: center;">{{ article.source}}</p>
+                    <p class="jumbotron" style="font-size: xx-large; text-align: center;">{{ id}}</p>
                 
                   <a href={{article.url}} target="_blank">
                     <img class="card-img-top" src={{article.urlToImage}} alt="Card image" style="width:100%">

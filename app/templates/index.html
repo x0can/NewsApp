@@ -1,6 +1,8 @@
 {% extends 'base.html'%}
 {% import 'macros.html' as macro %}
 
+
+
 {% block content %}
 
 
@@ -32,7 +34,7 @@
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                             CHECKOUT LATEST NEWS
                           </button>
-                    </div>
+                    </div> <br><hr>
                           
                           <!-- The Modal -->
                           <div class="modal" id="myModal">
@@ -52,7 +54,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                             <ul>
-                                                    {{macro.displaySourceList(popular) }}  
+                                                    {{ macro.displaySourceList(popular) }}  
                                                 </ul>
                                             
 
@@ -74,12 +76,26 @@
                             </div>
                           </div>
 
-                          <img src="https://arkenea.com/blog/wp-content/uploads/2018/09/pexels-photo-374631.jpeg" alt="" height="fit-content" style="height: fit-content; background-repeat: no-repeat ;" class="img-responsive">
+                         <div class="row">
+                           <div class="col-sm-6 col-md-6 col-lg-6">
+                              <img src="https://arkenea.com/blog/wp-content/uploads/2018/09/pexels-photo-374631.jpeg"  alt="" style="height: 50vh; width: auto; background-repeat: no-repeat ;" class="img-responsive">
 
+
+                           </div>
+
+                           <div class="col-sm-6 col-md-6 col-lg-6">
+                              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSN1kJfZlUOhDb8ZivkTN55XZqgSRCAD0TIfHiWSNRdEZFqg5XM"  alt="" style="height: 50vh; width: auto; background-repeat: no-repeat ;" class="img-responsive">
+
+
+                           </div>
+
+                         </div>
 
            </div>
 
            <!-- Button to Open the Modal -->
+
+           
 
         
 

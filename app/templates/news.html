@@ -2,16 +2,16 @@
 {% block content %}
 
 
-
-<div class="container">
+{% for article in news %}
+<div class="container-fluid">
 
 
 
     <div class="row no-gutters">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card card-inverse">
-                <p class="jumbotron" style="font-size: xx-large; text-align: center;">{{ id }}</p>
-              {% for article in news %}
+                <p class="jumbotron" style="font-size: xx-large; text-align: center;">{{ id}}</p>
+            
               <a href={{article.url}} target="_blank">
                 <img class="card-img-top" src={{article.urlToImage}} alt="Card image" style="width:100%">
               </a>
@@ -24,7 +24,7 @@
                         <a href={{article.url}} target="_blank" class="btn btn-primary stretched-link">Read More</a>
                     </p> <br><br> <hr>
                 </div>
-                {% endfor %}
+                
             </div>
         </div>
     
@@ -32,6 +32,8 @@
     
    
   </div>
+
+  {% endfor %}
 {% endblock %}
 
 
