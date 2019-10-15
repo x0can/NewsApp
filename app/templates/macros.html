@@ -32,16 +32,19 @@
 {% endmacro %}
 
 {% macro displayArticleList(article_list) %}
-{% for article in article_list %}
+
+
 
 <div class="container-fluid">
 
 
 
-        <div class="row no-gutters">
-            <div class="col-md-8">
-                <div class="card card-inverse">
-                    <p class="jumbotron" style="font-size: xx-large; text-align: center;">{{ id}}</p>
+        <div class="row">
+            <div class="col-md-12">
+                {% for article in article_list %}
+                <div class="card">
+                  <div class="card-body col-md-6">
+                     
                 
                   <a href={{article.url}} target="_blank">
                     <img class="card-img-top" src={{article.urlToImage}} alt="Card image" style="width:100%">
@@ -55,16 +58,19 @@
                             <a href={{article.url}} target="_blank" class="btn btn-primary stretched-link">Read More</a>
                         </p> <br><br> <hr>
                     </div>
+                  </div>
                     
                 </div>
+                {% endfor %}
             </div>
         
         </div>
         
        
       </div>
+    
 
-{% endfor %}
+
 {% endmacro %}
 
 
