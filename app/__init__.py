@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_bootstrap import Bootstrap
-from .config import config_options
+from config import config_options
 
 
 # app = Flask(__name__,instance_relative_config= True)
