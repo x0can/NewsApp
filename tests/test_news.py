@@ -1,7 +1,7 @@
 import unittest
 from app.models import Article,Source
 
-class NewsTest(unittest.TestCase):
+class TestNews(unittest.TestCase):
     '''
     Test class to test the instance of news articles
     '''
@@ -10,7 +10,7 @@ class NewsTest(unittest.TestCase):
         the setup method to run before every test
         '''
         self.new_article = Article('bbc','raphael','football','manchester looses','www','src','nov','scores','celebrity')
-        self.new_sources = Source('BBC','Global news','general','true','cnn','ntv')
+        self.new_sources = Source('BBC','Global news','general','true','cnn','ntv','kenya')
     def test_instance(self):
         self.assertTrue(isinstance(self.new_article,Article))
 
